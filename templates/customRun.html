@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/bootstrap/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/fonts/circular-std/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/libs/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/fonts/fontawesome/css/fontawesome-all.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/vector-map/jqvmap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/jvectormap/jquery-jvectormap-2.0.2.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/daterangepicker/daterangepicker.css') }}">
+    <title>File Upload</title>
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- main wrapper -->
+    <!-- ============================================================== -->
+    <div class="dashboard-main-wrapper">
+        <!-- ============================================================== -->
+        <!-- navbar -->
+        <!-- ============================================================== -->
+        <div class="dashboard-header">
+            <nav class="navbar navbar-expand-lg bg-white fixed-top">
+                <a class="navbar-brand" href="/">Insight Issuer Linking</a>
+            </nav>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end navbar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- left sidebar -->
+        <!-- ============================================================== -->
+        <div class="nav-left-sidebar sidebar-dark">
+            <div class="menu-list">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="d-xl-none d-lg-none" href="/">Dashboard</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-divider">
+                                Menu
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success">6</span></a>
+                                <div id="submenu-1" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">Data</a>
+                                            <div id="submenu-1-2" class="collapse submenu" style="">
+                                                <ul class="nav flex-column">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="undef-issuers">Undef Issuers</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="sina">Known SINA</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="fixed">Fixed Mapping</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="linked-issuers">Linked Issuers</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="external-rating">External Rating</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="custom-run">Custom Run</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end left sidebar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- wrapper  -->
+        <!-- ============================================================== -->
+        <div class="dashboard-wrapper">
+            <div class="container-fluid  dashboard-content">
+                <!-- ============================================================== -->
+                <!-- pageheader -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="page-header">
+                            <h2 class="pageheader-title">Custom Run</h2>
+                            <div class="page-breadcrumb">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="/" class="breadcrumb-link">Dashboard</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Custom Run</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- end pageheader -->
+                <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- basic form  -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="card">
+                                <h5 class="card-header">Run Narrative</h5>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="inputText3" class="col-form-label">Counterparty</label>
+                                            <input id="inputText3" type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputEmail">Security</label>
+                                            <input id="inputEmail" type="email" placeholder="name@example.com" class="form-control">
+                                        </div>
+                                    </form>
+                                    
+                                    <a href="#" class="btn btn-rounded btn-primary">Run Narratives</a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- end basic form  -->
+                    <!-- ============================================================== -->
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- end main wrapper  -->
+    <!-- ============================================================== -->
+    <!-- jquery 3.3.1  -->
+
+    <script src="{{url_for('static',filename = 'js/jquery/jquery-3.3.1.min.js')}}"></script>
+    <script src="{{url_for('static',filename = 'js/bootstrap/bootstrap.bundle.js')}}"></script>    
+    <script src="{{url_for('static',filename = 'js/slimscroll/jquery.slimscroll.js')}}"></script>
+    <script src="{{url_for('static',filename = 'js/charts/chartist-bundle/chartist.min.js')}}"></script>
+    <script src="{{url_for('static',filename = 'js/charts/chartist-bundle/chartist.js')}}"></script>
+    <script src="{{url_for('static',filename = 'js/charts/chartist-bundle/chartist-plugin-threshold.js')}}"></script>
+    <script src="{{url_for('static',filename = 'js/charts/c3charts/c3.min.js')}}"></script>
+    <script src="{{url_for('static',filename = 'js/charts/c3charts/d3-5.4.0.min.js')}}"></script>
+    <script src="{{url_for('static',filename = 'js/charts/charts-bundle/Chart.bundle.js')}}"></script>
+    <script src="{{url_for('static',filename = 'js/charts/charts-bundle/chartjs.js')}}"></script>
+    <script src="{{url_for('static',filename = 'js/charts/sparkline/jquery.sparkline.js')}}"></script>
+    <script src="{{url_for('static',filename = 'js/libs/main.js')}}"></script>
+    <script src="{{url_for('static',filename = 'js/gauge/gauge.min.js')}}"></script>
+    <script src="{{url_for('static',filename = 'js/charts/morris-bundle/raphael.min.js')}}"></script>
+    <script src="{{url_for('static',filename = 'js/charts/morris-bundle/morris.js')}}"></script>
+    <script src="{{url_for('static',filename = 'js/momentjs/moment.min.js')}}"></script>
+
+    
+</body>
+</html>
